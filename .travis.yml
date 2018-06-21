@@ -20,12 +20,10 @@ jobs:
   include:
     - stage: build only
       if: branch IS NOT "master"
-      script: vuepress build
+      script: echo "Buidling Docs Site" && vuepress build
     - stage: build & deploy
       if: branch IS "master"
-      script: echo "Buidling Docs Site"
-      script: vuepress build -d docs
-      script: echo "Deploying to S3..."
+      script: echo "Buidling Docs Site" && vuepress build -d docs && echo "Deploying to S3..."
       deploy:
         provider: s3
         access_key_id: $ACCESS_KEY
