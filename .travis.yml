@@ -4,6 +4,8 @@ node_js:
 
 cache: yarn
 
+skip_cleanup: true
+
 git:
   depth: 1
 
@@ -16,6 +18,11 @@ before_install:
 
 jobs:
   include:
+    - stage: build only
+      if: branch IS NOT "master"
+      script: vuepress build
+    - stage: build & deploy
+      if: branch IS "master"
       script: echo "Buidling Docs Site"
       script: vuepress build -d docs
       script: echo "Deploying to S3..."
@@ -27,6 +34,5 @@ jobs:
         region: us-west-2
         local-dir: docs
         acl: public_read
-        skip_cleanup: true
         detect_encoding: true
         default_text_charset: 'utf-8'
