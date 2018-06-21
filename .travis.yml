@@ -19,7 +19,7 @@ before_install:
 jobs:
   include:
     - stage: build only
-      if: branch IS NOT "master"
+      if: branch NOT "master"
       script: echo "Buidling Docs Site" && vuepress build
     - stage: build & deploy
       if: branch IS "master"
