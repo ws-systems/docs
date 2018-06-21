@@ -4,8 +4,6 @@ node_js:
 
 cache: yarn
 
-skip_cleanup: true
-
 git:
   depth: 1
 
@@ -30,6 +28,7 @@ jobs:
       if: branch = "master"
       script: echo "Buidling Docs Site" && vuepress build -d .build/docs
       deploy:
+        skip_cleanup: true
         provider: s3
         access_key_id: $ACCESS_KEY
         secret_access_key: $ACCESS_SECRET
