@@ -16,7 +16,6 @@ before_install:
 
 jobs:
   include:
-    - stage: build & deploy
       script: echo "Buidling Docs Site"
       script: vuepress build -d docs
       script: echo "Deploying to S3..."
