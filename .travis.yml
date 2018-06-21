@@ -29,12 +29,11 @@ jobs:
       script: echo "Buidling Docs Site" && vuepress build -d .build/docs
       deploy:
         skip_cleanup: true
-        provider: s3
-        access_key_id: $ACCESS_KEY
-        secret_access_key: $ACCESS_SECRET
-        bucket: "docs.whitestar.systems"
-        region: us-west-2
+        provider: pages
         local-dir: .build/docs/
-        acl: public_read
-        detect_encoding: true
-        default_text_charset: 'utf-8'
+        fqdn: docs.whitestar.systems
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        on:
+          branch: gh-pages
