@@ -15,9 +15,7 @@ before_install:
   - yarn global add vuepress
 
 before_deploy:
-  - echo "Deploying to S3..."
-  - ls -alh
-  - ls .build -alh
+  - echo "Deploying to GH Pages..."
 
 jobs:
   include:
@@ -35,5 +33,4 @@ jobs:
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
         keep-history: true
-        on:
-          branch: gh-pages
+        target-branch: gh-pages
