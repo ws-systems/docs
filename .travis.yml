@@ -7,6 +7,10 @@ cache: yarn
 git:
   depth: 1
 
+branches:
+  only:
+  - master
+
 before_install:
   - yarn global add vuepress
 
@@ -14,7 +18,7 @@ jobs:
   include:
     - stage: build & deploy
       script: echo "Buidling Docs Site"
-      script: vuepress build
+      script: vuepress build -d docs
       script: echo "Deploying to S3..."
       deploy:
         provider: s3
@@ -22,7 +26,7 @@ jobs:
         secret_access_key: $ACCESS_SECRET
         bucket: "wss-docs"
         region: us-west-2
-        local-dir: .vuepress/dist/
+        local-dir: docs
         acl: public_read
         skip_cleanup: true
         detect_encoding: true
