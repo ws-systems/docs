@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - "8"
 
 git:
   depth: 1
@@ -6,11 +8,15 @@ git:
 before_install:
   - npm install -g vuepress
 
+stages:
+  - name: deploy
+    if: branch = master
+
 jobs:
   include:
-    - stage: Build
+    - stage: build
       script: vuepress build
-    - stage: Deploy - GitHub Pages
+    - stage: deploy
       script: echo "Deploying to GitHub Pages ..."
       deploy:
         local-dir: .vuepress/dist/
