@@ -15,9 +15,9 @@ jobs:
     - stage: build
       script: vuepress build
     - stage: deploy
+      if: branch IS master
       script: echo "Deploying to GitHub Pages ..."
       deploy:
-        if: branch = master
         local-dir: .vuepress/dist/
         fqdn: docs.whitestar.systems
         provider: pages
