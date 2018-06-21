@@ -14,12 +14,14 @@ before_install:
 
 jobs:
   include:
-    - stage: build
+    - stage: build only
+      if: branch IS NOT "master"
       script: vuepress build
-    - stage: deploy
+    - stage: build & deploy
       if: branch IS "master"
-      before_install: skip
-      script: skip
+      script: echo "Buidling Docs Site"
+      script: vuepress build
+      script: echo "Deploying to S3..."
       deploy:
         provider: s3
         access_key_id: $ACCESS_KEY
