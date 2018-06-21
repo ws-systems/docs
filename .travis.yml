@@ -15,14 +15,16 @@ jobs:
     - stage: build
       script: vuepress build
     - stage: deploy
-      if: branch IS master
-      script: echo "Deploying to GitHub Pages ..."
+      if: branch IS "master"
+      script: echo "Deploying to S3..."
       deploy:
+        provider: s3
+        access_key_id: $ACCESS_KEY
+        secret_access_key: $ACCESS_SECRET
+        bucket: "wss-docs"
+        region: us-west-2
+        skip_cleanup: true
         local-dir: .vuepress/dist/
-        fqdn: docs.whitestar.systems
-        provider: pages
-        skip-cleanup: true
-        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-        keep-history: true
-        on:
-          branch: gh-pages
+        acl: public_read
+        detect_encoding: true
+        default_text_charset: 'utf-8'
