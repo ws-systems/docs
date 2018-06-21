@@ -22,10 +22,10 @@ before_deploy:
 jobs:
   include:
     - stage: build only
-      if: branch != "master"
+      if: branch != master
       script: echo "Buidling Docs Site" && vuepress build
     - stage: build & deploy
-      if: branch = "master"
+      if: branch = master
       script: echo "Buidling Docs Site" && vuepress build -d .build/docs
       deploy:
         skip_cleanup: true
