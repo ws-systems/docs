@@ -2,15 +2,13 @@ language: node_js
 node_js:
   - "8"
 
+cache: yarn
+
 git:
   depth: 1
 
 before_install:
-  - npm install -g vuepress
-
-stages:
-  - name: deploy
-    if: branch = master
+  - yarn global add vuepress
 
 jobs:
   include:
@@ -19,6 +17,7 @@ jobs:
     - stage: deploy
       script: echo "Deploying to GitHub Pages ..."
       deploy:
+        if: branch = master
         local-dir: .vuepress/dist/
         fqdn: docs.whitestar.systems
         provider: pages
