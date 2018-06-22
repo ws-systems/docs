@@ -22,7 +22,6 @@ jobs:
       if: branch = master
       script: echo "Buidling Docs Site" && vuepress build -d .build/docs
       deploy:
-        skip_cleanup: true
         provider: pages
         local-dir: .build/docs/
         fqdn: docs.whitestar.systems
