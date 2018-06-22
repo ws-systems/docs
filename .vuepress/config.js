@@ -75,7 +75,11 @@ function genSidebarMMS (title) {
       collapsable: false,
       children: [
         '',
-        'second'
+        'web_install',
+        'configuration',
+        'agent_deploy',
+        'user_management',
+        'usage'
       ]
     }
   ]

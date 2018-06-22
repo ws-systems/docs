@@ -1,35 +1,7 @@
 # MediaSite Recorder Monitor
-TODO: Documentation and GitBook for Setup
-TODO: JDoc for various Classes and Methods as needed.
 
-Mediasite Docs: [mediasite.sdsu.edu/mediasite/api/v1/$metadata](http://mediasite.sdsu.edu/mediasite/api/v1/$metadata)
+Mediasite Recorder Monitor is designed to keep an eye on your fleet of Mediasite recorders to ensure maximum uptime and peak performance. Ensuring that recorders are online and ready to record is critical to capturing content when the time comes, and Mediasite Recorder Monitor can take care of that for you.
 
-Auth Docs: https://github.com/pac4j/jax-rs-pac4j
+Split into a Web Server and an Agent, Mediasite Recorder Monitor can be deployed outside of your organization's network will still maintaining access to the recorders and their internal APIs. Both are available as Docker Containers for quick and easy deployment.
 
-### DDL
-```sql
-CREATE TABLE users (
-  PK         INT PRIMARY KEY AUTO_INCREMENT,
-  email      TEXT,
-  first_name TEXT,
-  last_name  TEXT,
-  password   TEXT,
-  notify     TINYINT(1)
-);
-CREATE TABLE preferences (
-  setting VARCHAR(32) PRIMARY KEY NOT NULL,
-  value   TEXT
-);
-CREATE TABLE recorders (
-  id                       VARCHAR(64) PRIMARY KEY NOT NULL,
-  name                     TEXT,
-  description              TEXT,
-  serial_number            TEXT,
-  version                  TEXT,
-  last_version_update_date TEXT,
-  physical_address         TEXT,
-  image_version            TEXT,
-  last_seen                TIMESTAMP  DEFAULT NOW(),
-  status                   INT
-);
-```
+Authentication with the Web UI is managed via [Hub](/hub/), via OpenIDConnect to reduce the account management overhead. You will need a installation of Hub (version 2017.2 or later) that is accessible to the Web Server, as well as a Hub User who has the ability to create new services.
