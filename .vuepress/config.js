@@ -58,7 +58,9 @@ module.exports = {
     lastUpdated: 'Updated',
     repo: 'ws-systems/docs',
     editLinks: true,
-    editLinkText: 'Edit this page on GitHub'
+    editLinkText: 'Edit this page on GitHub',
+    licenseText: 'Creative Commons (CC BY-SA 4.0)',
+    licenseLink: 'https://creativecommons.org/licenses/by-sa/4.0/'
   }
 }
 
