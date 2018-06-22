@@ -12,7 +12,7 @@ $codeBgColor = #282c34
   display block  /* may not need this, but I've found I do */
 
 
-@media (max-width: 419px)
+@media (max-width: $MQMobileNarrow)
   .navbar .site-name
     background none
     padding-left 0
@@ -22,7 +22,9 @@ $codeBgColor = #282c34
   font-family "Font Awesome 5 Brands"
     content "\f09b"
 
-.home .feature
-    flex-grow 1
-    flex-basis 45%
-    max-width 45%
+.home
+  .footer
+    span.separator
+      border-color lighten($textColor, 40%)
+    .acknowledgement
+      color lighten($textColor, 25%)
