@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Whitestar Docs',
+  title: 'WhiteStar Docs',
   description: 'WhiteStar Systems Documentation Hub',
   head: [
     ['link', { rel: 'icon', href: `/logo.png` }],
@@ -59,7 +59,7 @@ module.exports = {
     repo: 'ws-systems/docs',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
-    licenseText: 'Creative Commons (CC BY-SA 4.0)',
+    licenseText: 'Creative Commons (CC BY-SA 4.0) Licensed',
     licenseLink: 'https://creativecommons.org/licenses/by-sa/4.0/'
   }
 }

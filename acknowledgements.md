@@ -12,7 +12,7 @@ Changes to the docs, as well as outside contributions, are managed by [GitHub](h
 
 [![Build Status](https://travis-ci.com/ws-systems/docs.svg?branch=master)](https://travis-ci.com/ws-systems/docs)
 
-Like all of the documentation contained in this repository, the code that renders this site, as well as any included utilities are licensed under the MIT License, whose full text can be found below. Documentation is licensed under {{ this.$site.themeConfig.licenseText }}, for which the full text can be found at [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).
+Like all of the documentation contained in this repository, the code that renders this site, as well as any included utilities are licensed under the MIT License, whose full text can be found below. Documentation is licensed under Creative Commons (CC BY-SA 4.0), for which the full text can be found at [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).
 
 
 ### MIT License
