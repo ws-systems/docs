@@ -13,9 +13,3 @@ Once logged in, the items that you currently have checked out will be listed, as
 ![Welcome View](./assets/Welcome.png)
 
 From this point, you can check out or check in items. If your use account has supervisor/administrator rights, the admin button will also be available in the nav bar.
-
----
-
-## License
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

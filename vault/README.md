@@ -10,12 +10,3 @@ Vault is available for a variety of platforms, which can all be downloaded from 
 Once you have downloaded the package, move it to `/usr/bin/` and make sure that it is executable. Vault reads in any properties that are not specified in the command line via arguments from Environment Variables. The most important one is the `VAULT_ADDR` which specifies via what protocol, what address, and what port will be used to communicate with the vault. The `export` command below can be adapted to match your server's specification (which we will be working on in the next sections).
 
 `export VAULT_ADDR='https://127.0.0.1:8200'`
-
-You may want to add this line to your bash profile to keep you from needing to set the Environment Variables after every login. *You will still need to Authenticate with the Vault after every login.*
-
-
----
-
-## License
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
