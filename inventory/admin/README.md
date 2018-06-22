@@ -1,4 +1,4 @@
-# Overview
+# Admin Overview
 
 VIMS provides a vast array of tools for administrator/supervisor users to make managing their inventory system quick and easy. Each of the tools is broken down into their own pages to provide you quick and easy access to the information that you need.
 

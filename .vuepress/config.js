@@ -83,7 +83,13 @@ function genSidebarMMS (title) {
 
 function genSidebarInventory() {
   return [
-    '',
+    {
+      title: 'Inventory',
+      collapsable: false,
+      children: [
+        ''
+      ]
+    },
     {
       title: 'Introduction',
       collapsable: false,
