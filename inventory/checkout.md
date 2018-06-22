@@ -2,7 +2,7 @@
 
 When you go out for a shoot, you will want to check out the items that you are taking with you, as well as note their condition. To start a check out, login and click on the Checkout Tab in the Menu Bar at the top of the page.
 
-![](assets/Checkout-Blank.png)
+![](./assets/Checkout-Blank.png)
 
 ## Checking Out Items
 
@@ -19,4 +19,3 @@ Unless the current user is an supervisor, a supervisor will need to authorize th
 ![](./assets/Checkout-SupCheck.png)
 
 Once a transaction is approved and submitted, it cannot be changed or updated to ensure that the information contained within is not mutated and therefore invalidated. If you are done using the Inventory Manager for the time being, be sure to **logout**!
-
