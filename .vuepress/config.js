@@ -14,6 +14,10 @@ module.exports = {
     ['link', {rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css', integrity: 'sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp', crossorigin: 'anonymous'}]
   ],
   themeConfig: {
+    algolia: {
+      apiKey: 'e35f0d0527aa383d2626a3edd73be910',
+      indexName: 'whitestar'
+    },
     sidebar: {
       '/ms-mon/': genSidebarMMS('Mediasite Recorder Monitor'),
       '/inventory/' : genSidebarInventory(),

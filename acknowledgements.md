@@ -8,9 +8,11 @@ WhiteStar Docs are build from Markdown via [VueDocs](https://github.com/vuejs/vu
 
 Changes to the docs, as well as outside contributions, are managed by [GitHub](https://github.com/ws-systems/docs), who also provide the hosting via GitHub Pages. We would love for you to contribute to our docs! Found an error, typo, or want to help make things clearer for future readers, use the __"{{ this.$site.themeConfig.editLinkText }}"__ link at the bottom of most pages to submit your change request via GitHub.
 
-[Travis-CI](https://travis-ci.com/) provides the missing link between VuePress and GitHub Pages in the form of a build job that generates the production documentation files and pushes them to GitHub Pages. Details about this build can be found by clicnking on the build status indicator below.
+[Travis-CI](https://travis-ci.com/) provides the missing link between VuePress and GitHub Pages in the form of a build job that generates the production documentation files and pushes them to GitHub Pages. Details about this build can be found by clicking on the build status indicator below.
 
 [![Build Status](https://travis-ci.com/ws-systems/docs.svg?branch=master)](https://travis-ci.com/ws-systems/docs)
+
+Search is provided by [Algolia](https://www.algolia.com/ref/docsearch), which allows us to go beyond the base capabilities of Vuepress and index the content as well as the headings, hopefully allowing you to find what you were looking for a bit quicker.
 
 Like all of the documentation contained in this repository, the code that renders this site, as well as any included utilities are licensed under the MIT License, whose full text can be found below. Documentation is licensed under Creative Commons (CC BY-SA 4.0), for which the full text can be found at [https://creativecommons.org/licenses/by-sa/4.0/](https://creativecommons.org/licenses/by-sa/4.0/).
 
