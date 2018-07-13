@@ -43,7 +43,7 @@ You will want to make sure the job queue is empty when you stop the agent, else 
 docker stop mms-agent
 docker rm -v mms-agent
 
-docker pull mms-agent
+docker pull wssystems/mms-agent
 
 docker create --name mms-agent \
   -e MS_MON_SERVER_URL="<MMS Server URL>" \
