@@ -27,21 +27,21 @@ If you want users to be able to report issues, you can enable the *Report Issue 
 ## Docker Container Deployment
 Once you have setup the Vault Secret, you are ready to deploy the docker container (assuming that you have already installed Docker on your host). The image is available in the Docker Store for free and can be pulled via the Docker CLI.
 ```sh
-docker pull wssystems/mms
+docker pull wssystems/mms-server
 ```
 
 We can then create and run the container, being sure to set the Vault Environment Variables correctly.
 ```sh
-docker create --name mms \
+docker create --name mms-server \
   -e VAULT_ADDR="{ VAULT URL }" \
   -e VAULT_ROLE="{ VAULT APP ROLE }" \
   -e VAULT_SECRET="{ VAULT APP ROLE SECRET }" \
   -e MS_APP="{ VAULT SECRET NAME }" \
   -p 7000:8080 \
   --restart=always \
-  wssystems/mms
+  wssystems/mms-server
 
-docker start mms
+docker start mms-server
 ```
 
 The Mediasite Recorder Monitor Service is now running on port 7000!
