@@ -11,7 +11,7 @@ The agent authenticates with the server using a unique ID that is generated on f
 
 You will need to set the `MS_MON_SERVER_URL` to the URL of the Mediasite Recorder Monitor Server this agent will report to. The `MS_MON_AGENT_NAME` does not need to be unique and is used to identify the agent to users in the Web Admin Panel from within the Monitor.
 
-```sh
+```bash
 docker create --name mms-agent \
   -e MS_MON_SERVER_URL="<MMS Server URL>" \
   -e MS_MON_AGENT_NAME="<Display Name Agent>"
@@ -39,7 +39,7 @@ When you update the Recorder Monitor Server, you may need to update the agent as
 You will want to make sure the job queue is empty when you stop the agent, else the job in progress might be delayed. If you need to update the agent while there are jobs queued, you can reauthorize the agent, wait about 5 minutes for the currently executing job to finish, then stop the agent.
 :::
 
-```sh
+```bash
 docker stop mms-agent
 docker rm -v mms-agent
 
