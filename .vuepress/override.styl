@@ -1,4 +1,30 @@
+// showing default values
 $accentColor = #4c5c96
 $textColor = #2c3e50
 $borderColor = #eaecef
 $codeBgColor = #282c34
+
+.navbar .site-name
+  background-image url('/logo.png')
+  background-size 35px
+  background-repeat no-repeat
+  padding-left 45px  /* width of the image plus a little extra padding */
+  display block  /* may not need this, but I've found I do */
+
+
+@media (max-width: $MQMobileNarrow)
+  .navbar .site-name
+    background none
+    padding-left 0
+
+
+.nav-links .repo-link::before
+  font-family "Font Awesome 5 Brands"
+    content "\f09b"
+
+.home
+  .footer
+    span.separator
+      border-color lighten($textColor, 40%)
+    .acknowledgement
+      color lighten($textColor, 25%)
