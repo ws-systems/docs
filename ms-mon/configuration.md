@@ -7,7 +7,7 @@ By default, any user who logs in using the configured OpenID Connect Client is g
 1. Login using your OpenID Connect Credentials. This creates your user account, which we will promote in the next steps.
 2. Login to the Super User console, which is located at `http://<Your URL>/superuser`. You will be prompted for a password, which can be found in the Server log files. If you are running in a Docker Container, you can quickly retrieve this password via the following command:
 ```bash
-docker exec mms-server "cat /usr/local/tomcat/logs/MS-recorder-monitor.log | grep \"Super User Password\" | tail -1"
+docker exec mms-server cat /usr/local/tomcat/logs/MS-recorder-monitor.log | grep "Super User Password" | tail -1
 ```
 3. Once you have signed in, you will see your name as "Super User" in the top right corner. You can now access the **Manage** Menu and change your user's role.
 4. From **Manage > Users**, click on the Edit User button next to the desired user and update the role to the desired setting. Be sure to hit Update when you are done.
