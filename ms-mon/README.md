@@ -1,4 +1,4 @@
-# MediaSite Recorder Monitor
+# Introduction
 
 Mediasite Recorder Monitor is designed to keep an eye on your fleet of Mediasite recorders to ensure maximum uptime and peak performance. Ensuring that recorders are online and ready to record is critical to capturing content when the time comes, and Mediasite Recorder Monitor can take care of that for you.
 

@@ -1,4 +1,4 @@
-# Inventory Management
+# Overview
 
 The Inventory Management (IMs) is a system that allows the history and condition of a variety of inventory items to be tracked as they are used by various individuals.
 
